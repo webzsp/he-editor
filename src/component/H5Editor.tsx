@@ -13,7 +13,7 @@ export default class H5Editor extends React.PureComponent<IProps>{
     };
     componentDidMount(): void {
         if(this.props.onReady){
-            this.props.onReady(new Editor({}));
+            this.props.onReady(new Editor({pageList:[]}));
         }
         this.addEventListener();
     }
