@@ -1,5 +1,5 @@
-import BaseConfig from "@/core/BaseConfig";
-import {uuid} from "@/utils";
+import BaseConfig from "./BaseConfig";
+import {uuid} from "../utils";
 
 export default class WarpComponent<T> {
     componentType:string;

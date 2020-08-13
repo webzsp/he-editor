@@ -6,13 +6,14 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "jsx": "react",
+    "lib": ["es2017","esnext","es2015"],
     "esModuleInterop": true,
     "sourceMap": false,
     "outDir": "./dist",
     "baseUrl": "./",
     "strict": true,
     "paths": {
-      "@/*": ["src/*"]
+
     },
     "allowSyntheticDefaultImports": true,
     "watch": true

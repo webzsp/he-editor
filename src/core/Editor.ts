@@ -3,9 +3,10 @@
  * @date 2020/8/9 21:05
  * @description
  */
-import Page from "@/core/Page";
-import {ComponentUtils} from "@/core/ComponentUtils";
-import {dispatch} from "@/core/Event";
+import Page from "./Page";
+import {ComponentUtils} from "./ComponentUtils";
+import {dispatch} from "./Event";
+
 interface EditorConfig {
     width:number;
     height:number;

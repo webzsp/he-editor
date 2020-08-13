@@ -1,4 +1,5 @@
-import {TRANSPARENT} from "@/constant";
+import {TRANSPARENT} from "../constant/dom";
+
 export default class PageConfig {
     opacity:number;
     backgroundColor:string;

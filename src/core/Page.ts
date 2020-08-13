@@ -1,6 +1,6 @@
-import PageConfig from "@/core/PageConfig";
-import WarpComponent from "@/core/warpComponent";
-import {uuid} from "@/utils";
+import WarpComponent from "./warpComponent";
+import PageConfig from "./PageConfig";
+import {uuid} from "../utils";
 
 export default class Page {
     id:string;

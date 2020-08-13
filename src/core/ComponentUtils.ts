@@ -4,7 +4,7 @@
  * @description  组件的核心逻辑,挂载删除等
  */
 import React from "react";
-import Component from "@/core/Component";
+import Component from "./Component";
 
 class ComponentUtils {
   private componentMap: {[key:string]:React.ReactNode}; // 组件缓存,根据ID

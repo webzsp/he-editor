@@ -1,4 +1,4 @@
-import {ComponentUtils} from "@/core/ComponentUtils";
-import PlainImage from "@/test/PlainImage";
+import PlainImage from "./test/PlainImage";
+import {ComponentUtils} from "./core/ComponentUtils";
 
 ComponentUtils.getInstance().registerComponent(PlainImage.type,PlainImage,{});

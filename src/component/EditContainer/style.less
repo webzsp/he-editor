@@ -1,0 +1,84 @@
+@blockWidth:4px;
+.point-center{
+  //width: 10px;
+  //height: 10px;
+  //border-radius: 0;
+}
+.editor_container{
+  .content{
+    border: 1px solid #ccc;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  :global{
+    .operate-rotate{
+      position: absolute;
+      top: -39px;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      left: 50%;
+      transform: translateX(-8px);
+      //background-color: #4cae4c;
+      cursor: url(http://localhost:3000/circle.png) 16 16, pointer;
+    }
+    .operate-point {
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      border: 1px solid #1baee1;
+      background-color: #ffffff;
+    }
+
+    .top-left {
+      top: -(@blockWidth);
+      left: -@blockWidth;
+      cursor: nw-resize;
+    }
+    .top-center {
+      top: -@blockWidth;
+      left: 50%;
+      cursor: n-resize;
+      transform: translateX(-50%);
+      .point-center();
+    }
+    .top-right {
+      top: -@blockWidth;
+      cursor: ne-resize;
+      right: -@blockWidth;
+    }
+    .center-left {
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: w-resize;
+      left: -@blockWidth;
+      .point-center();
+    }
+    .center-right {
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: e-resize;
+      right: -@blockWidth;
+    }
+    .bottom-left {
+      bottom: -@blockWidth;
+      cursor: sw-resize;
+      left: -@blockWidth;
+    }
+    .bottom-center {
+      .point-center();
+      bottom: -@blockWidth;
+      cursor: s-resize;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .bottom-right {
+      cursor: se-resize;
+      right: -@blockWidth;
+      bottom: -@blockWidth;
+    }
+  }
+}

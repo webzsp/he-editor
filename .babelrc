@@ -11,5 +11,5 @@
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties","@babel/plugin-transform-runtime"]
+  "plugins": ["@babel/plugin-proposal-class-properties","@babel/plugin-transform-runtime","syntax-do-expressions","@babel/plugin-proposal-function-bind"]
 }

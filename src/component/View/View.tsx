@@ -4,7 +4,7 @@
  * @description 渲染组件
  */
 import React from 'react';
-import Page from "@/core/Page";
+import Page from "../../core/Page";
 interface IProps {
     pageList?:Page[]
 }
