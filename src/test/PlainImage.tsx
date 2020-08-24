@@ -4,12 +4,12 @@
  * @description
  */
 
-import React, {lazy} from "react";
+import React from "react";
 interface ConfigProps {
     layer:any
 }
 export default class PlainImage extends React.Component<ConfigProps>{
-    static type: any;
+    static type: string='plainImage';
     getStyle(){
         const {layer:{componentConfig,layerConfig}}=this.props;
         return {
@@ -23,10 +23,9 @@ export default class PlainImage extends React.Component<ConfigProps>{
         }
     }
     render(){
-        const {layer:{layerConfig,componentConfig}}=this.props;
         return (
             <div >
-                <img draggable={"false"} style={this.getStyle()}  src={componentConfig.src} alt=""/>
+                <img draggable={"false"}  src={''} alt=""/>
             </div>
         )
     }

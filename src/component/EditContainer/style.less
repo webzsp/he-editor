@@ -7,9 +7,19 @@
 .editor_container{
   .content{
     border: 1px solid #ccc;
-    width: 100px;
-    height: 100px;
     position: absolute;
+    &:after{
+      display: table;
+      content: "";
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+
+  .clear{
+
   }
   :global{
     .operate-rotate{

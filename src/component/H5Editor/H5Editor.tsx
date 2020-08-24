@@ -42,7 +42,7 @@ export default class H5Editor extends React.PureComponent<IProps>{
         return (
             <div className={style.editor}>
                 <EditorContainer/>
-                {/*<View pageList={editorInstance}/>*/}
+                <View pageList={editorInstance}/>
             </div>
         )
     }

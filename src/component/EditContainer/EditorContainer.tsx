@@ -5,7 +5,7 @@ import {
     BOTTOM_CENTER,
     BOTTOM_LEFT, BOTTOM_RIGHT,
     CENTER_LEFT,
-    CENTER_RIGHT,
+    CENTER_RIGHT, LAYER_ROTATE,
     TOP_CENTER,
     TOP_LEFT,
     TOP_RIGHT
@@ -14,35 +14,42 @@ import Icon from "../Icon/Icon";
 
 export default class EditorContainer extends React.PureComponent {
 
-    mouseDown(){
+    mouseDown(type:string){
+        console.log(type);
+    }
+    handlerRotate(type:string){
 
     }
-    handlerRotate(){}
     onDrag(){
         console.log(22,this);
+    }
+
+    onStart(){
+
     }
     render() {
         return (
             <>
                 <div className={style.editor_container}>
-                    <Draggable onDrag={::this.onDrag}>
-                        <div className={style.content}>
-                            我是一个拖动组件
-                            <span className="operate-rotate" onMouseDown={this.handlerRotate.bind(this)}>
+                    <div></div>
+                    <Draggable onDrag={this.onDrag}  onStart={()=>false} position={{x:0,y:0}}>
+                        <div className={style.content} onMouseDown={e => console.log(e)}>
+                            <div style={{width:100,height:100}}>
+                                我是组件
+                            </div>
+                            <span className="operate-rotate" editoreventtype={LAYER_ROTATE}>
                                 <Icon type='icon-xuanzhuan-copy' style={{color:'#4cae4c'}}/>
                             </span>
-                            <span onMouseDown={this.mouseDown.bind(this, TOP_LEFT)} className="operate-point top-left">
-                            </span>
-                            <span onMouseDown={this.mouseDown.bind(this, TOP_CENTER)} className="operate-point top-center"/>
-                            <span onMouseDown={this.mouseDown.bind(this, TOP_RIGHT)} className="operate-point top-right"/>
-                            <span onMouseDown={this.mouseDown.bind(this, CENTER_LEFT)} className="operate-point center-left"/>
-                            <span onMouseDown={this.mouseDown.bind(this, CENTER_RIGHT)} className="operate-point center-right"/>
-                            <span onMouseDown={this.mouseDown.bind(this, BOTTOM_LEFT)} className="operate-point bottom-left"/>
-                            <span onMouseDown={this.mouseDown.bind(this, BOTTOM_CENTER)} className="operate-point bottom-center"/>
-                            <span onMouseDown={this.mouseDown.bind(this, BOTTOM_RIGHT)} className="operate-point bottom-right"/>
+                            <span editoreventtype={TOP_LEFT} className="operate-point top-left"/>
+                            <span editoreventtype={TOP_CENTER} className="operate-point top-center"/>
+                            <span editoreventtype={TOP_RIGHT} className="operate-point top-right"/>
+                            <span editoreventtype={CENTER_LEFT} className="operate-point center-left"/>
+                            <span editoreventtype={CENTER_RIGHT} className="operate-point center-right"/>
+                            <span editoreventtype={BOTTOM_LEFT} className="operate-point bottom-left"/>
+                            <span editoreventtype={BOTTOM_CENTER} className="operate-point bottom-center"/>
+                            <span editoreventtype={BOTTOM_RIGHT}  className="operate-point bottom-right"/>
                         </div>
                     </Draggable>
-
                 </div>
             </>
         )
